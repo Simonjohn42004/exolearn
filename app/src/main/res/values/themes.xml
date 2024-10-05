@@ -6,7 +6,6 @@
     </style>
 
     <style name="Theme.ExoLearnApp" parent="Base.Theme.ExoLearnApp" >
-        <item name="android:windowSplashScreenBackground">@color/black</item>
 
 
 
