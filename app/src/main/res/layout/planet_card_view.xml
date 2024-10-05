@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="8dp"
+    android:backgroundTint="@color/white"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="4dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Kepler Name (Bold) -->
+        <TextView
+            android:id="@+id/koiNameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="KOI Name"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="@color/black" />
+
+        <!-- Kepler Name (Bold) -->
+        <TextView
+            android:id="@+id/keplerNameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kepler Name"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/black" />
+
+        <!-- Disposition -->
+        <TextView
+            android:id="@+id/dispositionTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Disposition"
+            android:textStyle="normal"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:layout_marginTop="8dp"/>
+
+        <!-- Duration -->
+        <TextView
+            android:id="@+id/durationTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Duration"
+            android:textStyle="normal"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:layout_marginTop="4dp"/>
+
+        <!-- Orbital Period -->
+        <TextView
+            android:id="@+id/orbitalPeriodTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Orbital Period"
+            android:textStyle="normal"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:layout_marginTop="4dp"/>
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

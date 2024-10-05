@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:background="@color/black"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".login.RegisterationActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/header_title"
+        android:text="Registration"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"/>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        app:lottie_rawRes="@raw/lottie_planet_login_page"
+        android:layout_below="@id/header_title"
+        android:id="@+id/registrationLottieAnimation"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/registrationLottieAnimation"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="-15dp"
+        app:cardCornerRadius="28dp"
+        android:padding="10dp"
+        android:backgroundTint="@color/white"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:orientation="vertical">
+
+            <!-- Welcome Text -->
+            <TextView
+                android:id="@+id/registerTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="16dp"
+                android:text="Create Your Account"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:textColor="@color/black" />
+
+            <!-- Username Input -->
+            <EditText
+                android:id="@+id/usernameInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/edit_text_background"
+                android:hint="Username"
+                android:inputType="textPersonName"
+                android:padding="14dp"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <!-- Email Input -->
+            <EditText
+                android:id="@+id/emailInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/edit_text_background"
+                android:hint="Email"
+                android:inputType="textEmailAddress"
+                android:padding="14dp"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <!-- Password Input -->
+            <EditText
+                android:id="@+id/passwordInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/edit_text_background"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:padding="14dp"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/lottieAnimationView"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginEnd="4dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    app:lottie_autoPlay="false"
+                    app:lottie_loop="false"
+                    app:lottie_rawRes="@raw/lottie_check_box_2" />
+
+
+                <!-- "Show Password" Text -->
+                <TextView
+                    android:id="@+id/showPasswordText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Show Password"
+                    android:layout_gravity="center"
+                    android:textColor="@color/black"
+                    android:textSize="17sp" />
+
+            </LinearLayout>
+
+            <!-- Confirm Password Input -->
+            <EditText
+                android:id="@+id/confirmPasswordInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/edit_text_background"
+                android:hint="Confirm Password"
+                android:inputType="textPassword"
+                android:padding="14dp"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <!-- Sign Up Button with Lottie Animation -->
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sign Up!"
+                android:layout_marginTop="10dp"
+                android:textStyle="bold"
+                android:id="@+id/signUpButton"/>
+
+            <!-- Already Have Account? Text -->
+            <TextView
+                android:id="@+id/alreadyHaveAccount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_gravity="center_horizontal"
+                android:text="Already have an account? Log in"
+                android:textColor="@color/blue"
+                android:textSize="14sp"
+                android:clickable="true"
+                android:focusable="true" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <!-- Loading Screen Overlay with Blur Effect -->
+    <FrameLayout
+        android:id="@+id/loadingScreen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:elevation="10dp"
+        android:background="@color/semi_transparent_black"
+        android:visibility="gone">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!-- Lottie Animation for Loading -->
+            <com.airbnb.lottie.LottieAnimationView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                android:layout_centerInParent="true"
+                app:lottie_autoPlay="true"
+                android:id="@+id/loadingAnimation"
+                app:lottie_rawRes="@raw/lottie_planet_loading"
+                app:lottie_loop="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Loading..."
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_below="@id/loadingAnimation"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/white"/>
+        </RelativeLayout>
+
+    </FrameLayout>
+
+</RelativeLayout>

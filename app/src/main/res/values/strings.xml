@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">ExoLearn App</string>
+
+    <string-array name="disposition_array">
+        <item>ALL</item>
+        <item>CONFIRMED</item>
+        <item>CANDIDATE</item>
+        <item>FALSE POSITIVE</item>
+    </string-array>
+</resources>

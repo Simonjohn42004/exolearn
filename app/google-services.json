@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "307006698335",
+    "project_id": "exolearn-44370",
+    "storage_bucket": "exolearn-44370.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:307006698335:android:1e56a9d4b853ae4db87cea",
+        "android_client_info": {
+          "package_name": "com.example.exolearnapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDy13n_MYdAA7sknkYFoSk9hT39xOHertY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

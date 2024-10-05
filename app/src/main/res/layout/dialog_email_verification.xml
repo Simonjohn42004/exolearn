@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/dialogTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Email Verification"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:layout_marginBottom="16dp" />
+
+    <TextView
+        android:id="@+id/dialogBody"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="A verification email has been sent to your email. Please check your inbox."
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:layout_marginBottom="24dp" />
+
+    <Button
+        android:id="@+id/continueButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/blue"
+        android:text="Continue"
+        android:textColor="@color/white"
+        android:layout_gravity="center" />
+
+</LinearLayout>

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".homescreen.MainHomePage">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="20dp"
+        android:text="Welcome\nSimon John"
+        android:textColor="@color/white"
+        android:textSize="40dp"
+        android:textStyle="bold" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/planetOfTheCard"
+        android:layout_below="@id/textView"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+
+        android:backgroundTint="@color/spaceGrey"
+        app:cardCornerRadius="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Exoplanet of the Day"
+                android:textColor="@color/white"
+                android:textSize="32dp"
+                android:layout_marginBottom="20dp"/>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="10dp"
+                android:backgroundTint="@color/white">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/ic_launcher"
+                        android:id="@+id/planetOfTheDayImage"
+                        android:contentDescription="planet of the day"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Discover the wonder of Kepler-425b,a super earth exoplanet orbiting a sun like star"
+                        android:id="@+id/planetOfTheDayDescription"
+                        android:textColor="@color/black"
+                        android:textSize="15dp"
+                        android:textStyle="bold"/>
+
+                </LinearLayout>
+
+
+
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                />
+
+
+        </LinearLayout>
+
+
+
+
+    </androidx.cardview.widget.CardView>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Menu Options"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:id="@+id/menuOptionsText"
+        android:layout_below="@id/planetOfTheCard"
+        android:layout_margin="20dp"/>
+
+    <com.google.android.flexbox.FlexboxLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        app:flexDirection="row"
+        app:flexWrap="wrap"
+        app:justifyContent="space_between"
+        app:alignItems="center"
+        android:layout_below="@id/menuOptionsText">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Explore the Universe"
+            android:id="@+id/exploreTheUniverseButton"
+            android:backgroundTint="@color/white"
+            android:textColor="@color/spaceGrey"
+            android:textSize="12sp"
+            app:layout_flexGrow="1" />
+
+        <Button
+            android:id="@+id/learnAboutExoplanetsButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/purple"
+            android:text="Learn About Exoplanets"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            app:layout_flexGrow="1"/> <!-- Add space between buttons -->
+
+    </com.google.android.flexbox.FlexboxLayout>
+
+
+
+
+
+</RelativeLayout>

@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:id="@+id/main"
+android:background="@color/white"
+android:orientation="vertical"
+android:backgroundTint="@color/black"
+android:layout_margin="5dp"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context=".planetpage.ExoplanetInformationPage">
+
+
+<com.google.android.flexbox.FlexboxLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    app:justifyContent="space_between"
+    android:layout_margin="10dp">
+
+    <TextView
+        android:id="@+id/exoPlanetName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Planet Name"
+        android:textSize="30sp"
+        android:gravity="start"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_flexGrow="1" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/favorite_card_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="20dp">
+
+        <LinearLayout
+            android:id="@+id/favorite_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/favorite_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/black"
+                android:layout_margin="5dp"
+                android:src="@drawable/baseline_favorite_24" />
+
+            <TextView
+                android:id="@+id/favorite_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Favorite"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:textAlignment="center"
+                android:layout_margin="5dp"
+                android:layout_gravity="end|center" />
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+</com.google.android.flexbox.FlexboxLayout>
+
+<ImageView
+    android:id="@+id/planet_image"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:src="@drawable/ic_launcher_background"
+    android:layout_marginTop="10dp"
+    android:layout_marginBottom="10dp" />
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:background="@drawable/white_placeholder"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/discovery_details_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Discovery Details"
+            android:textStyle="bold"
+            android:textSize="30sp"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/koiName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="KOI Name: \nXXXXXXXXXXXXX"
+            android:textSize="20sp"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/keplerName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kepler Name: \nXXXXXXXXXXXXX"
+            android:textSize="20sp"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/kepId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="KepID: \nXXXXXXXXXXXXX"
+            android:textSize="20sp"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/disposition"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Exoplanet Archive Disposition: \nXXXXXXXXXXXXX"
+            android:textSize="20sp"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Orbital Characteristics"
+            android:textStyle="bold"
+            android:textSize="30sp"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/orbitalPeriod"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Orbital Period: \nXXXXXXXXXXXXX"
+            android:textSize="20sp"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/transitEpoch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Transit Epoch: \nXXXXXXXXXXXXX"
+            android:textSize="20sp"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/transitDuration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Transit Duration: \nXXXXXXXXXXXXX"
+            android:textSize="20sp"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Planetary Properties"
+            android:textStyle="bold"
+            android:textSize="30sp"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/planetaryRadius"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Planetary Radius: \nXXXXXXXXXXXXX"
+            android:textSize="20sp"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/transitDepth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Transit Depth: \nXXXXXXXXXXXXX"
+            android:textSize="20sp"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/equilibriumTemp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Equilibrium Temperature: \nXXXXXXXXXXXXX"
+            android:textSize="20sp"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/stellar_properties_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Stellar Properties"
+            android:textStyle="bold"
+            android:textSize="30sp"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/stellarRadius"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Stellar Radius: \nXXXXXXXXXXXXX"
+            android:textSize="20sp"
+            android:layout_marginBottom="20dp"
+            android:textColor="@color/black" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="See Visual Image"
+            android:id="@+id/planetVisualizationButton"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginBottom="20dp"
+            android:layout_gravity="center"/>
+    </LinearLayout>
+</ScrollView>
+
+    <!-- Loading Screen Overlay with Blur Effect -->
+    <FrameLayout
+        android:id="@+id/loadingScreen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:elevation="10dp"
+        android:background="@color/semi_transparent_black"
+        android:visibility="visible">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!-- Lottie Animation for Loading -->
+            <com.airbnb.lottie.LottieAnimationView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                android:layout_centerInParent="true"
+                app:lottie_autoPlay="true"
+                android:id="@+id/loadingAnimation"
+                app:lottie_rawRes="@raw/lottie_planet_loading"
+                app:lottie_loop="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Loading..."
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_below="@id/loadingAnimation"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/white"/>
+        </RelativeLayout>
+
+    </FrameLayout>
+</LinearLayout>

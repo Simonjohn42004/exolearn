@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:id="@+id/main"
+    tools:context=".searchscreen.ExoplanetSearch">
+
+    <!-- EditText for searching exoplanets -->
+    <EditText
+        android:id="@+id/searchEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Search for a planet"
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        android:background="@drawable/edit_text_background"
+        android:textColor="@color/black"
+        android:textSize="18sp" />
+
+    <!-- Filter options section -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Filter by planet disposition"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp"
+            android:textSize="20sp"/>
+
+        <!-- Spinner for Planet Disposition -->
+        <Spinner
+            android:id="@+id/dispositionSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edit_text_background"
+            android:entries="@array/disposition_array" />
+
+    </LinearLayout>
+
+
+    <!-- RecyclerView for displaying exoplanet list -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/exoplanetRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:clipToPadding="false"
+        android:padding="10dp"
+        android:scrollbars="vertical"/>
+
+    <!-- Loading Screen Overlay with Blur Effect -->
+    <FrameLayout
+        android:id="@+id/loadingScreen"
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:background="@color/semi_transparent_black"
+        android:elevation="10dp"
+        android:visibility="visible">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!-- Lottie Animation for Loading -->
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/loadingAnimation"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                app:lottie_rawRes="@raw/lottie_planet_loading" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/loadingAnimation"
+                android:layout_centerHorizontal="true"
+                android:text="Loading..."
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+    </FrameLayout>
+
+</LinearLayout>
