@@ -65,7 +65,15 @@ dependencies {
     //Authentication
     implementation(libs.firebase.auth)
 
+    //FireStore
+    implementation(libs.firebase.firestore)
+
     //Splash Screen
     implementation(libs.core.splashscreen)
+
+    //Google Material
+    implementation (libs.material)
+
+
 
 }

@@ -2,7 +2,14 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.INTERNET" /> <!-- Declare that your app queries for email handling apps -->
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.VIEW" />
+
+            <data android:scheme="mailto" />
+        </intent>
+    </queries>
 
     <application
         android:allowBackup="true"
@@ -14,6 +21,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ExoLearnApp"
         tools:targetApi="31">
+        <activity
+            android:name=".learningmodel.activities.QuizActivity"
+            android:exported="false" />
+        <activity
+            android:name=".learningmodel.activities.LessonActivity"
+            android:exported="false" />
+        <activity
+            android:name=".learningmodel.activities.RoadmapActivity"
+            android:exported="false" />
         <activity
             android:name=".login.ForgotPasswordActivity"
             android:exported="false" />
@@ -37,8 +53,8 @@
             android:exported="false" />
         <activity
             android:name=".MainActivity"
-            android:theme="@style/Theme.ExoLearnApp"
-            android:exported="true">
+            android:exported="true"
+            android:theme="@style/Theme.ExoLearnApp">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -46,14 +62,5 @@
             </intent-filter>
         </activity>
     </application>
-
-    <!-- Declare that your app queries for email handling apps -->
-    <queries>
-        <intent>
-            <action android:name="android.intent.action.VIEW" />
-            <data android:scheme="mailto" />
-        </intent>
-    </queries>
-
 
 </manifest>
